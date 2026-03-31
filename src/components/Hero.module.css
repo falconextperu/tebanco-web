@@ -1,0 +1,479 @@
+.heroWrapper {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  padding-top: 180px;
+  min-height: 100vh;
+}
+
+.glowLeft {
+  position: absolute;
+  top: 10%;
+  left: -5%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, transparent 65%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glowRight {
+  position: absolute;
+  top: 5%;
+  right: -5%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, transparent 65%);
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+/* Email Capture Pill */
+.emailCapture {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 8px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto 5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.emailInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  color: #111827;
+  outline: none;
+  font-family: inherit;
+}
+
+.emailInput::placeholder {
+  color: #9ca3af;
+}
+
+.submitBtn {
+  background: #1f2937;
+  color: #ffffff;
+  border-radius: 40px;
+  padding: 6px 20px 6px 6px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.25);
+}
+
+.submitBtn:hover {
+  background: #374151;
+  transform: translateY(-2px);
+}
+
+.btnIconBox {
+  width: 36px;
+  height: 36px;
+  background: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.15);
+}
+
+/* Visual Mockups */
+.heroVisual {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  /* Let sponsors sit below */
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.phoneCentered {
+  position: absolute;
+  bottom: -40px;
+  /* sinks below hero container slightly */
+  width: 300px;
+  height: 600px;
+  background: #ffffff;
+  border-radius: 40px;
+  border: 12px solid #1f2937;
+  /* Dark black/gray bezel like image */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 15;
+}
+
+.notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 26px;
+  background: #1f2937;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  z-index: 10;
+}
+
+.phoneHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+.phArrow {
+  font-size: 1.2rem;
+  color: #4b5563;
+}
+
+.phMore {
+  letter-spacing: 2px;
+  color: #4b5563;
+}
+
+.phoneBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.phTabs {
+  display: flex;
+  justify-content: space-between;
+  background: #f3f4f6;
+  border-radius: 30px;
+  padding: 4px;
+}
+
+.phTab,
+.phTabActive {
+  padding: 6px 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.phTabActive {
+  background: #000;
+  color: #fff;
+}
+
+.phTab {
+  color: #6b7280;
+}
+
+
+.phChartArea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.phBarGroup {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  height: 120px;
+  position: relative;
+}
+
+.phBar {
+  width: 26px;
+  background: #e5e7eb;
+  border-radius: 6px;
+}
+
+.phBarActive {
+  width: 26px;
+  background: #3b82f6;
+  border-radius: 6px;
+  position: relative;
+}
+
+.phTooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3b82f6;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.phTooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px 4px 0;
+  border-style: solid;
+  border-color: #3b82f6 transparent transparent transparent;
+}
+
+.phDays {
+  display: flex;
+  gap: 16px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.phSectionLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.phSectionLabel span {
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.phCard {
+  background: #3b82f6;
+  border-radius: 12px;
+  padding: 15px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pCardHead {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.pCardVal {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.pCardFoot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  opacity: 0.7;
+}
+
+.phCard2 {
+  background: #111827;
+  border-radius: 12px;
+  padding: 15px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: -10px;
+}
+
+
+/* Left Floating Card */
+.floatLeft {
+  position: absolute;
+  left: 10%;
+  top: 60px;
+  width: 280px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  z-index: 20;
+}
+
+.flTabs {
+  display: flex;
+  gap: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+.flTabActive {
+  background: #111827;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.flTotal {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 5px;
+}
+
+.flSvgBox {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.flSvg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flMonths {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+
+/* Right Floating Card */
+.floatRight {
+  position: absolute;
+  right: 6%;
+  top: 100px;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 20;
+}
+
+.frItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.frIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.frTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.frSub {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.frAmount {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+@media (max-width: 1024px) {
+
+  .floatLeft,
+  .floatRight {
+    display: none;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .emailCapture {
+    padding: 4px;
+    border-radius: 40px;
+  }
+
+  .emailInput {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+  }
+
+  .submitBtn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}

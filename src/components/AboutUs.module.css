@@ -1,0 +1,352 @@
+.aboutSection {
+  background: #ffffff;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+@media (max-width: 991px) {
+  .aboutContainer {
+    flex-direction: column;
+  }
+}
+
+/* --- Left Side: Visual Canvas --- */
+.visualsSide {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.visualCanvas {
+  width: 100%;
+  max-width: 500px;
+  height: 480px;
+  background: #f8fafc;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Animations for tab switching */
+.cardAdelanto, .cardGestion, .cardRiesgo {
+  width: 100%;
+  max-width: 380px;
+  background: #ffffff; /* Changed to white version */
+  border-radius: 20px;
+  padding: 1.5rem;
+  color: #111827; /* Dark text for readability on white */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  animation: fadeIn 0.4s ease forwards;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Graphic: Adelanto */
+.caHeader {
+  margin-bottom: 2rem;
+}
+.caHeader span {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+.caAmount {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 4px 0;
+  color: #0f172a;
+}
+.caSub {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.caGraph {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 160px;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.caBarGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  justify-content: flex-end;
+  width: 40px;
+}
+
+.caBar {
+  width: 20px;
+  background: #e2e8f0;
+  border-radius: 6px;
+}
+
+.caBarActive {
+  width: 20px;
+  background: #3b82f6; /* Blue matching Hero */
+  border-radius: 6px;
+  position: relative;
+}
+
+.caTooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+.caTooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px 4px 0;
+  border-style: solid;
+  border-color: #111827 transparent transparent transparent;
+}
+
+/* Custom white circle on top of active bar to match design */
+.caBarActive::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #ffffff; /* Matches background */
+}
+
+.caLabel, .caLabelActive {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+.caLabelActive {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.lineGrid {
+  position: absolute;
+  bottom: 50px;
+  left: 1.5rem;
+  right: 1.5rem;
+  height: 1px;
+  border-bottom: 1px dashed rgba(0,0,0,0.08);
+  z-index: 5;
+}
+.lineGrid::before, .lineGrid::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  border-bottom: 1px dashed rgba(0,0,0,0.08);
+}
+.lineGrid::before { top: -45px; }
+.lineGrid::after { top: -90px; }
+
+
+/* Graphic: Gestión */
+.cgHeader {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #0f172a;
+}
+.cgList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.cgItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f8fafc;
+  border: 1px solid rgba(0,0,0,0.03);
+  padding: 12px;
+  border-radius: 12px;
+}
+.cgDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.cgInfo {
+  display: flex;
+  flex-direction: column;
+}
+.cgInfo strong {
+  font-size: 0.85rem;
+  color: #0f172a;
+}
+.cgInfo span {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Graphic: Riesgo */
+.cardRiesgo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+}
+.crCircleProgress {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#3b82f6 98%, #e2e8f0 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.crInner {
+  width: 100px;
+  height: 100px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.crInner strong {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+.crInner span {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+.crText {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+/* --- Right Side: Content & Tabs --- */
+.contentSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tagWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  width: fit-content;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+.tagIcon {
+  font-size: 1rem;
+}
+.tagText {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: 0.05em;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tabItem {
+  position: relative;
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.5rem; /* Removed left extra padding for border */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.tabItem:hover {
+  background: #f8fafc;
+}
+
+.tabActive {
+  background: #f1f5f9; /* matching design: light gray/blue */
+  border-color: #e2e8f0;
+}
+
+.tabContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tabTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.tabDesc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}

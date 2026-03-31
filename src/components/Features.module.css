@@ -1,0 +1,160 @@
+.platformsSection {
+  background: #ffffff;
+  position: relative;
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+/* Suave gradiente radial para conectar con la vibra del Hero */
+.platformsSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: radial-gradient(circle at top center, rgba(224, 242, 254, 0.6) 0%, rgba(255, 255, 255, 1) 50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.platformsSection>div {
+  position: relative;
+  z-index: 10;
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem auto;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #0f172a !important;
+  /* Forzar oscuro para que no herede dark mode global accidental */
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #475569 !important;
+  line-height: 1.6;
+}
+
+.mockupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* Image Wrapper flotante */
+.devicesVisual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.bannerImg {
+  width: 90%;
+  max-width: 1100px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Tarjetas */
+.selectorList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.selectCard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.25rem;
+  width: calc(33.333% - 1.5rem);
+  min-width: 280px;
+  max-width: 380px;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.selectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px -10px rgba(33, 82, 221, 0.15);
+  border-color: rgba(33, 82, 221, 0.1);
+}
+
+.scIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.scText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.scTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.scDesc {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 2.8rem;
+  }
+  .bannerImg {
+    width: 95%;
+  }
+  .selectCard {
+    width: calc(50% - 1rem);
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .platformsSection {
+    padding: 5rem 0;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .selectCard {
+    width: 100%;
+    padding: 1.5rem;
+  }
+}

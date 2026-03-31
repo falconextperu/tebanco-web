@@ -1,0 +1,26 @@
+.sponsorsSection {
+  background: #ffffff;
+  padding: 3rem 0;
+  position: relative;
+  z-index: 50;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sponsorsGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.sponsorCard {
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: all 0.3s;
+}
+
+.sponsorCard:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}

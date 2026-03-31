@@ -1,0 +1,346 @@
+.simuladorSection {
+  padding: 8rem 0;
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* Grilla principal: Izquierda form, Derecha resultados */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+@media (max-width: 991px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------- FORMULARIO (IZQUIERDA) ---------------- */
+.formPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-top: 1rem;
+}
+
+.formTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.prefix {
+  position: absolute;
+  left: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #4b5563;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  padding: 0 1.25rem 0 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.inputSelect {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  padding: 0 3rem 0 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.inputSelect:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.selectIcon {
+  position: absolute;
+  right: 1.25rem;
+  color: #4b5563;
+  pointer-events: none;
+}
+
+.btnCalcular {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+}
+
+.btnCalcular:hover {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.3);
+}
+
+.disclaimer {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin-top: 1rem;
+  align-items: flex-start;
+}
+
+.infoIcon {
+  color: #3b82f6;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ---------------- RESULTADOS (DERECHA) ---------------- */
+.resultsPanel {
+  background: #f8fafc;
+  border-radius: 1.5rem;
+  padding: 5rem 2.5rem 2rem 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.02);
+}
+
+/* Barras visuales animadas */
+.barsContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 280px;
+  margin-bottom: 3rem;
+  gap: 1rem;
+}
+
+.barCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.barTrackWrapper {
+  width: 100%;
+  max-width: 120px;
+  height: 180px; /* Max height of bars */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.barTooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.barActive .barTooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.barVal {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.barRate {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.barTrack {
+  width: 100%;
+  background-color: #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.barActive .barTrack {
+  background: linear-gradient(180deg, #2563eb 0%, #60a5fa 100%);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.15);
+}
+
+.barLabel {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+/* Tabla de resumen inferior */
+.summaryTable {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summaryRowLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.srIcon {
+  color: #94a3b8;
+}
+
+.summaryRowRight {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.greenText {
+  color: #10b981;
+}
+
+.redText {
+  color: #ef4444;
+}
+
+.summaryTotal {
+  margin-top: 0.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.summaryTotal .summaryRowLeft {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #111827;
+}
+
+.summaryTotal .summaryRowRight {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .formPanel,
+  .resultsPanel {
+    padding: 1.5rem;
+  }
+
+  .barsContainer {
+    height: 260px;
+    gap: 0.5rem;
+  }
+
+  .barTrackWrapper {
+    height: 150px;
+    max-width: 80px;
+  }
+}

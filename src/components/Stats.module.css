@@ -1,0 +1,282 @@
+.featuresSection {
+  background: #ffffff;
+  padding: 6rem 0 8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* bg waves */
+.bgWaves {
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 60%);
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.pill {
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 6px 18px;
+  border-radius: 30px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  letter-spacing: 0.5px;
+}
+
+.title {
+  font-size: 3.4rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.cardsGrid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.fcVisual {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  height: 360px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.02);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.alignBottom {
+  justify-content: flex-end;
+  padding-bottom: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.fcText h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.8rem;
+}
+
+.fcText p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Card 1: Credit Card Mockup */
+.creditCard {
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%);
+  border-radius: 16px 16px 0 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 40px rgba(37,99,235,0.25);
+  margin-bottom: -10px; /* Cut off intentionally */
+}
+
+.ccTop { 
+  display: flex; 
+  justify-content: space-between; 
+  color: rgba(255,255,255,0.9); 
+  font-size: 0.75rem; 
+  font-weight: 500; 
+}
+.ccWifi { 
+  font-size: 1.2rem; 
+  transform: rotate(90deg); 
+  font-weight: bold; 
+}
+.ccAmount { 
+  font-size: 2rem; 
+  font-weight: 800; 
+  color: #fff; 
+  margin-bottom: 1rem; 
+}
+.ccUser { 
+  font-size: 0.65rem; 
+  color: rgba(255,255,255,0.8); 
+  letter-spacing: 1px; 
+  margin-bottom: 0.5rem; 
+  text-transform: uppercase;
+}
+.ccNumbers { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  color: rgba(255,255,255,0.9); 
+  font-size: 0.95rem; 
+  font-weight: 600; 
+  letter-spacing: 2px;
+}
+
+.ccLogo { display: flex; align-items: center; }
+.ccDotRed { width: 20px; height: 20px; background: #ea001b; border-radius: 50%; opacity: 0.9; z-index: 2; }
+.ccDotYellow { width: 20px; height: 20px; background: #f79e1b; border-radius: 50%; margin-left: -8px; opacity: 0.9; z-index: 1; }
+
+/* Card 2: Recent Activity List */
+.activityBox {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  border: 1px solid #f1f5f9;
+  width: 95%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.abTitle { 
+  font-size: 0.95rem; 
+  font-weight: 700; 
+  color: #475569; 
+  margin-bottom: 0.5rem; 
+}
+
+.abItem { 
+  display: flex; 
+  gap: 12px; 
+  align-items: center; 
+}
+.abAvatar { 
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-size: 0.8rem; 
+  font-weight: 700; 
+  flex-shrink: 0;
+}
+.abInfo { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 4px; 
+}
+.abInfo strong { 
+  font-size: 0.8rem; 
+  color: #1e293b; 
+  font-weight: 600; 
+  line-height: 1.4; 
+}
+.abInfo span { 
+  font-size: 0.7rem; 
+  color: #94a3b8; 
+}
+
+/* Card 3: Chart Monitoring */
+.chartBox {
+  width: 100%;
+  height: 240px; /* Enough to hug bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+.cbTitle { 
+  font-size: 0.85rem; 
+  font-weight: 600; 
+  color: #64748b; 
+  margin-bottom: 0.2rem; 
+}
+.cbAmount { 
+  font-size: 2.2rem; 
+  font-weight: 800; 
+  color: #111827; 
+  margin-bottom: 1.5rem; 
+}
+
+.cbGraph {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.cbCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.cbCol span:first-child { 
+  font-size: 0.65rem; 
+  color: #94a3b8; 
+  font-weight: 600; 
+}
+
+.cbBar {
+  width: 100%;
+  background: #cbd5e1;
+  border-radius: 6px 6px 0 0;
+  opacity: 0.7;
+}
+
+.cbBarActive {
+  width: 100%;
+  background: linear-gradient(to bottom, #3b82f6, #60a5fa);
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 -5px 15px rgba(59,130,246,0.3);
+}
+
+@media (max-width: 1024px) {
+  .cardsGrid { 
+    grid-template-columns: 1fr; 
+    gap: 3rem; 
+  }
+  .title { 
+    font-size: 2.8rem; 
+  }
+}
+
+@media (max-width: 640px) {
+  .title { 
+    font-size: 2.2rem; 
+  }
+  .fcVisual {
+    height: 300px;
+  }
+}

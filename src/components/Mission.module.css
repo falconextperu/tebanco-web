@@ -1,0 +1,295 @@
+.missionSection {
+  background: #ffffff;
+  padding: 8rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.02);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Glows */
+.glowTopRight {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, transparent 65%);
+  filter: blur(90px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glowBottomLeft {
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, transparent 65%);
+  filter: blur(90px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* --- Top Region --- */
+.topRegion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 6rem;
+}
+
+.tagWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  width: fit-content;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+.tagText {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #334155;
+  letter-spacing: 0.05em;
+}
+
+.mainTitle {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #111827; 
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.mainTitle span {
+  color: #111827; 
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 650px;
+}
+
+.statsRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 4.5rem;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.statItem h3 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+  line-height: 1;
+}
+
+.statItem p {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* --- Bottom Region --- */
+.bottomRegion {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+@media (max-width: 991px) {
+  .bottomRegion {
+    flex-direction: column;
+  }
+  .statsRow {
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+  }
+  .mainTitle {
+    font-size: 2.6rem;
+  }
+  .statItem h3 {
+    font-size: 3.5rem;
+  }
+  .sideTitle {
+    font-size: 2.5rem;
+  }
+}
+
+/* Left Side: Mockup Canvas */
+.mockupSide {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.mockupCanvas {
+  background: #f1f5f9; 
+  border-radius: 32px;
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.transactionCard {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+}
+
+.tcIcon {
+  width: 42px;
+  height: 42px;
+  background: #f8fafc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tcText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.tcText strong {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111827;
+}
+.tcText span {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.tcAmount {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #10b981; /* Green for positive factoring cashflow */
+}
+
+/* Right Side: Content */
+.contentSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-right: 2rem;
+}
+
+.sideTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.sideTitle span {
+  color: #111827;
+}
+
+.sideText {
+  font-size: 1.25rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.checkList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.checkList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-size: 1.05rem;
+  color: #4b5563;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.checkIcon {
+  color: #111827; 
+  margin-top: 2px;
+}
+
+.primaryBtn {
+  background: #1f2937;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 16px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.2s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.primaryBtn:hover {
+  background: #374151;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .mockupCanvas {
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+    gap: 1rem;
+  }
+  .transactionCard {
+    padding: 1rem 0.75rem;
+    gap: 0.75rem;
+  }
+  .tcIcon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+  .tcText strong {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+  .tcText span {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  .tcAmount {
+    font-size: 0.9rem;
+  }
+}
