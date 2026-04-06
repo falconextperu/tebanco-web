@@ -4,19 +4,18 @@
   left: 0;
   right: 0;
   height: 90px;
-  background: #11152a; /* Dark navy */
-  z-index: 1000;
+  background: #11152a;
+  z-index: 9000;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .header.scrolled {
   height: 70px;
-  background: rgba(17, 21, 42, 0.98);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  background: rgba(17, 21, 42, 0.99);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
 }
 
 .container {
@@ -95,9 +94,11 @@
 
 .dropMenu {
   position: absolute;
-  top: 100%; /* No gap — gap is simulated with padding-top */
+  top: 100%;
+  /* No gap — gap is simulated with padding-top */
   left: 0;
-  padding-top: 12px; /* invisible bridge to prevent mouseLeave on gap */
+  padding-top: 12px;
+  /* invisible bridge to prevent mouseLeave on gap */
   min-width: 240px;
   z-index: 2000;
 }
@@ -111,8 +112,15 @@
 }
 
 @keyframes dropFadeIn {
-  from { opacity: 0; transform: translateY(-6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .dropItem {
@@ -155,7 +163,8 @@
 }
 
 .btnPrimary {
-  background: #583e9b; /* Purple CTA */
+  background: #583e9b;
+  /* Purple CTA */
   color: #ffffff;
   border-radius: 8px;
   padding: 10px 24px;
@@ -187,6 +196,9 @@
   cursor: pointer;
   padding: 4px;
   transition: transform 0.2s;
+  position: relative;
+  z-index: 9100;
+  /* always on top, clickable at any scroll position */
 }
 
 .mobileMenuBtn:active {
@@ -208,6 +220,8 @@
   transform: translateY(-10px);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
+  z-index: 8999;
+  /* just below the header itself */
 }
 
 .header.scrolled .mobileNavOverlay {
@@ -217,7 +231,8 @@
 .mobileNavOverlay.open {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(0);
+  height: 100%;
+  transform: translateY(-22px);
 }
 
 .mobileNav {
@@ -232,7 +247,7 @@
   font-weight: 500;
   color: #ffffff;
   text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 1rem;
   transition: color 0.2s;
 }
@@ -261,6 +276,7 @@
   .navDesktop {
     display: none;
   }
+
   .mobileMenuBtn {
     display: flex;
   }
