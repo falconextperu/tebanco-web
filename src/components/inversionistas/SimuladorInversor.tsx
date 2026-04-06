@@ -45,7 +45,7 @@ export const SimuladorInversor = () => {
   ];
 
   return (
-    <section className={styles.simuladorSection}>
+    <section className={styles.simuladorSection} id="simulador">
       <div className={`container ${styles.container}`}>
         
         <motion.div 

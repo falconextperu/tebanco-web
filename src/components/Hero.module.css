@@ -2,32 +2,18 @@
   background: #ffffff;
   position: relative;
   overflow: hidden;
-  padding-top: 180px;
-  min-height: 100vh;
+  padding-top: 150px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
 }
 
-.glowLeft {
-  position: absolute;
-  top: 10%;
-  left: -5%;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.45) 0%, transparent 65%);
-  filter: blur(80px);
-  z-index: 0;
-  pointer-events: none;
-}
-
-.glowRight {
-  position: absolute;
-  top: 5%;
-  right: -5%;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.35) 0%, transparent 65%);
-  filter: blur(80px);
-  z-index: 0;
-  pointer-events: none;
+.containerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  width: 100%;
 }
 
 .heroContent {
@@ -35,100 +21,92 @@
   z-index: 20;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
 }
 
 .title {
-  font-size: 3.8rem;
-  font-weight: 800;
-  color: #111827;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
   line-height: 1.15;
-  letter-spacing: -0.03em;
   margin-bottom: 1.5rem;
 }
 
 .description {
-  font-size: 1.25rem;
-  color: #4b5563;
-  line-height: 1.6;
-  max-width: 600px;
-  margin: 0 auto 3rem;
+  font-size: 1.2rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 2.5rem;
 }
 
-/* Email Capture Pill */
-.emailCapture {
+/* Button Group */
+.buttonGroup {
   display: flex;
   align-items: center;
-  background: #ffffff;
-  border-radius: 50px;
-  padding: 8px;
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto 5rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  gap: 1rem;
 }
 
-.emailInput {
-  flex: 1;
-  border: none;
-  background: transparent;
-  padding: 0 1.5rem;
-  font-size: 1rem;
-  color: #111827;
-  outline: none;
-  font-family: inherit;
-}
-
-.emailInput::placeholder {
-  color: #9ca3af;
-}
-
-.submitBtn {
-  background: #1f2937;
+.btnPrimary {
+  background: #583e9b;
   color: #ffffff;
-  border-radius: 40px;
-  padding: 6px 20px 6px 6px;
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  border-radius: 8px;
+  padding: 14px 28px;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: inherit;
-  box-shadow: 0 8px 20px rgba(17, 24, 39, 0.25);
+  text-decoration: none;
+  display: inline-block;
 }
 
-.submitBtn:hover {
-  background: #374151;
-  transform: translateY(-2px);
+.btnPrimary:hover {
+  background: #472d85;
 }
 
-.btnIconBox {
-  width: 36px;
-  height: 36px;
-  background: #000000;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.15);
+.btnSecondary {
+  background: transparent;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnSecondary:hover {
+  border-color: #94a3b8;
+  color: #475569;
 }
 
 /* Visual Mockups */
 .heroVisual {
   position: relative;
-  width: 100%;
+  flex: 1;
   height: 500px;
-  /* Let sponsors sit below */
   display: flex;
   justify-content: center;
+  align-items: center;
   z-index: 10;
+}
+
+.customImageWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.customImage {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
 
 .phoneCentered {
@@ -446,34 +424,42 @@
 }
 
 @media (max-width: 1024px) {
-
-  .floatLeft,
-  .floatRight {
-    display: none;
+  .containerFlex {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 3rem;
+  }
+  
+  .heroContent {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .buttonGroup {
+    justify-content: center;
   }
 
   .title {
-    font-size: 3rem;
+    font-size: 2.8rem;
+  }
+
+  .heroVisual {
+    height: 400px;
   }
 }
 
 @media (max-width: 640px) {
   .title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
-  .emailCapture {
-    padding: 4px;
-    border-radius: 40px;
+  .buttonGroup {
+    flex-direction: column;
+    width: 100%;
   }
 
-  .emailInput {
-    padding: 0 1rem;
-    font-size: 0.9rem;
-  }
-
-  .submitBtn {
-    padding: 0.7rem 1.2rem;
-    font-size: 0.85rem;
+  .btnPrimary, .btnSecondary {
+    width: 100%;
+    text-align: center;
   }
 }

@@ -10,8 +10,8 @@ export const Footer = () => {
         
         <div className={styles.brandCol}>
           <Link href="/" className={styles.logo}>
-            <ShieldCheck className={styles.logoIcon} size={28} />
-            <span>TeBanco</span>
+            <img src="/logos/fluxalogo.svg" alt="Fluxa Finance Logo" className={styles.fluxaImage} />
+            <span>FLUXA FINANCE</span>
           </Link>
           <p className={styles.description}>
             Transformando el futuro financiero de las empresas con soluciones de factoring ágiles y transparentes.
@@ -52,7 +52,7 @@ export const Footer = () => {
       <div className={styles.bottom}>
         <div className="container flex-between">
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} TeBanco. Todos los derechos reservados.
+            © {new Date().getFullYear()} Fluxa Finance. Todos los derechos reservados.
           </p>
           <div className={styles.disclaimer}>Autorizados por la SBS.</div>
         </div>

@@ -1,5 +1,5 @@
 .footer {
-  background: #000;
+  background: #11152a; /* Fluxa Finance Dark Blue */
   padding-top: 5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -28,12 +28,14 @@
   color: #fff;
 }
 
-.logoIcon {
-  color: var(--accent-cyan);
+.fluxaImage {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
 
 .description {
-  color: var(--text-secondary);
+  color: rgba(255,255,255,0.6);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -51,13 +53,14 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.6);
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .socialLink:hover {
-  background: var(--accent-cyan);
-  color: #000;
+  background: #583e9b;
+  color: #ffffff;
 }
 
 .linksCol {
@@ -74,13 +77,14 @@
 }
 
 .link {
-  color: var(--text-secondary);
+  color: rgba(255,255,255,0.6);
   font-size: 0.95rem;
   transition: color 0.2s ease;
+  text-decoration: none;
 }
 
 .link:hover {
-  color: var(--accent-cyan);
+  color: #ffffff;
 }
 
 .bottom {
@@ -89,15 +93,15 @@
 }
 
 .copyright {
-  color: var(--text-secondary);
+  color: rgba(255,255,255,0.5);
   font-size: 0.875rem;
 }
 
 .disclaimer {
-  color: var(--text-secondary);
+  color: rgba(255,255,255,0.8);
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
 }
 

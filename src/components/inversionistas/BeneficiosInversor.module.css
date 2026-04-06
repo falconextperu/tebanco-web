@@ -1,6 +1,6 @@
 .beneficiosSection {
   padding: 8rem 0;
-  background-color: #f8fafc;
+  background-color: #fcfcfd;
 }
 
 .container {
@@ -18,8 +18,8 @@
 .tag {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: rgba(37, 99, 235, 0.1);
-  color: #2563eb;
+  background-color: rgba(88, 62, 155, 0.08);
+  color: #583e9b;
   font-size: 0.875rem;
   font-weight: 700;
   border-radius: 2rem;
@@ -32,13 +32,13 @@
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.1;
-  color: #111827;
+  color: #11152a;
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
 }
 
 .accent {
-  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+  background: linear-gradient(90deg, #583e9b 0%, #a78bfa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -48,7 +48,7 @@
 .subtitle {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: #64748b;
 }
 
 .grid {
@@ -59,14 +59,14 @@
 
 .card {
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
   border-radius: 1.5rem;
   padding: 3rem;
   padding-bottom: 4rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 10px 30px rgba(17, 21, 42, 0.04);
 }
 
 .card::before {
@@ -76,7 +76,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  background: linear-gradient(90deg, #583e9b, #a78bfa);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
@@ -84,8 +84,8 @@
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.1);
-  border-color: rgba(37, 99, 235, 0.15);
+  box-shadow: 0 25px 50px -12px rgba(88, 62, 155, 0.12);
+  border-color: rgba(88, 62, 155, 0.15);
 }
 
 .card:hover::before {
@@ -98,15 +98,15 @@
   justify-content: center;
   width: 4.5rem;
   height: 4.5rem;
-  background: rgba(37, 99, 235, 0.08);
-  color: #2563eb;
+  background: rgba(88, 62, 155, 0.08);
+  color: #583e9b;
   border-radius: 1.25rem;
   margin-bottom: 2rem;
   transition: all 0.4s ease;
 }
 
 .card:hover .iconBox {
-  background: #2563eb;
+  background: #583e9b;
   color: white;
   transform: scale(1.05) rotate(5deg);
 }
@@ -114,14 +114,14 @@
 .cardTitle {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #111827;
+  color: #11152a;
   margin-bottom: 1rem;
 }
 
 .cardDescription {
   font-size: 1.125rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: #64748b;
 }
 
 @media (max-width: 1024px) {

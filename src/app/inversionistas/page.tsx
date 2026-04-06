@@ -8,8 +8,8 @@ import { TestimoniosInversor } from "@/components/inversionistas/TestimoniosInve
 import { FaqInversor } from "@/components/inversionistas/FaqInversor";
 
 export const metadata: Metadata = {
-  title: 'Inversiones en Factoring | TeBanco',
-  description: 'Invierte en facturas comerciales con TeBanco y obtén hasta el 18% de rentabilidad anual sin comisiones ocultas.',
+  title: 'Inversiones en Factoring | Fluxa Finance',
+  description: 'Invierte en facturas comerciales con Fluxa Finance y obtén hasta el 18% de rentabilidad anual sin comisiones ocultas.',
 };
 
 export default function InversionistasPage() {
@@ -20,7 +20,7 @@ export default function InversionistasPage() {
         <HeroInversor />
         <SimuladorInversor />
         <BeneficiosInversor />
-        <TestimoniosInversor />
+        {/* <TestimoniosInversor /> — COMENTADO TEMPORALMENTE */}
         <FaqInversor />
       </main>
       <Footer />

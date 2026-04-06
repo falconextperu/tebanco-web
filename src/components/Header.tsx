@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import styles from './Header.module.css';
-import { ChevronRight, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,13 +32,14 @@ export const Header = () => {
     document.body.style.overflow = '';
   };
 
+  const [isServiciosOpen, setIsServiciosOpen] = useState(false);
+  const serviciosRef = useRef<HTMLDivElement>(null);
+
   const navLinks = [
-    { name: 'Nosotros', href: '/#nosotros' },
-    { name: 'Beneficios', href: '/#beneficios' },
-    { name: 'Cómo Funciona', href: '/#como-funciona' },
-    { name: 'Plataforma', href: '/#plataforma' },
-    { name: 'Preguntas', href: '/#faq' },
+    { name: 'Inicio', href: '/' },
+    { name: 'Nosotros', href: '/nosotros' },
     { name: 'Inversionistas', href: '/inversionistas' },
+    { name: 'Contacto', href: '/contacto' },
   ];
 
   return (
@@ -46,9 +47,9 @@ export const Header = () => {
       <div className={`container ${styles.container}`}>
         <Link href="/" className={styles.logo} onClick={closeMenu}>
           <div className={styles.logoIcon}>
-            <div className={styles.innerCircle}></div>
+            <img src="/logos/fluxalogo.svg" alt="Fluxa Finance Logo" className={styles.fluxaImage} />
           </div>
-          TeBanco
+          FLUXA FINANCE
         </Link>
 
         {/* Navbar Desktop */}
@@ -58,14 +59,36 @@ export const Header = () => {
               {link.name}
             </Link>
           ))}
+          {/* Servicios Dropdown */}
+          <div
+            className={styles.navDropdown}
+            ref={serviciosRef}
+            onMouseEnter={() => setIsServiciosOpen(true)}
+            onMouseLeave={() => setIsServiciosOpen(false)}
+          >
+            <button className={`${styles.navLink} ${styles.navDropdownTrigger}`}>
+              Servicios
+              <ChevronDown size={14} strokeWidth={2.5} className={`${styles.dropChevron} ${isServiciosOpen ? styles.dropChevronOpen : ''}`} />
+            </button>
+            {isServiciosOpen && (
+              <div className={styles.dropMenu}>
+                <div className={styles.dropMenuInner}>
+                  <Link href="/servicios/factoring" className={styles.dropItem} onClick={closeMenu}>
+                    <div className={styles.dropItemIcon}>📄</div>
+                    <div>
+                      <div className={styles.dropItemTitle}>Factoring</div>
+                      <div className={styles.dropItemDesc}>Adelanta el cobro de tus facturas</div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
         </nav>
 
         <div className={styles.actions}>
-          <a href="http://localhost:5174/registro" className={styles.btnPrimary}>
-            <span>Comenzar</span>
-            <div className={styles.btnIconBox}>
-              <ChevronRight size={16} strokeWidth={3} />
-            </div>
+          <a href="/inversionistas#simulador" className={styles.btnPrimary}>
+            Solicitar financiación
           </a>
 
           <button className={styles.mobileMenuBtn} onClick={toggleMobileMenu}>
@@ -89,8 +112,7 @@ export const Header = () => {
           ))}
           <div className={styles.mobileCtaWrapper}>
             <a href="http://localhost:5174/registro" className={styles.btnPrimaryMobile} onClick={closeMenu}>
-              Comenzar
-              <ChevronRight size={18} strokeWidth={2.5} />
+              Solicitar financiación
             </a>
           </div>
         </nav>

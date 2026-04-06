@@ -2,40 +2,25 @@
 
 import React from 'react';
 import styles from './HowItWorks.module.css';
-import { ShoppingCart, Package, FileText, Send, CircleDollarSign } from 'lucide-react';
+import { Mail, FileText, BadgeDollarSign } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export const HowItWorks = () => {
   const steps = [
     {
-      icon: <ShoppingCart size={28} strokeWidth={1.5} />,
-      title: 'Venta a crédito',
-      desc: 'Realizas la venta a crédito de tus productos.',
-      colorClass: styles.color1
+      icon: <Mail size={24} strokeWidth={2} />,
+      title: 'Envíanos 3 documentos',
+      desc: 'Copia literal o vigencia de poder, DNI del representante legal y el contrato firmado.'
     },
     {
-      icon: <Package size={28} strokeWidth={1.5} />,
-      title: 'Entrega de productos',
-      desc: 'Entregas los productos o servicios a tu cliente.',
-      colorClass: styles.color2
+      icon: <FileText size={24} strokeWidth={2} />,
+      title: 'Sube tus facturas',
+      desc: 'Evaluamos las facturas de tu cliente para proponerte una tasa de descuento justa (sin costos ocultos).'
     },
     {
-      icon: <FileText size={28} strokeWidth={1.5} />,
-      title: 'Recepción de factura',
-      desc: 'Tu cliente recepciona la factura conforme.',
-      colorClass: styles.color3
-    },
-    {
-      icon: <Send size={28} strokeWidth={1.5} />,
-      title: 'Envío de factura',
-      desc: 'Envías la factura negociable a TeBanco.',
-      colorClass: styles.color4
-    },
-    {
-      icon: <CircleDollarSign size={28} strokeWidth={1.5} />,
-      title: 'Desembolso rápido',
-      desc: 'Te desembolsamos en cuestión de horas.',
-      colorClass: styles.color5
+      icon: <BadgeDollarSign size={24} strokeWidth={2} />,
+      title: 'Recibe el adelanto de tu dinero',
+      desc: 'Recibe entre el 85% - 90% del dinero de tus facturas a tus cuentas bancarias.'
     }
   ];
 
@@ -43,66 +28,67 @@ export const HowItWorks = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.12, delayChildren: 0.2 }
+      transition: { staggerChildren: 0.2 }
     }
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      scale: 1,
-      transition: { duration: 0.5, ease: "easeOut" as const } 
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, ease: "easeOut" as const }
     }
   };
 
   return (
     <section className={styles.howItWorksSection} id="como-funciona">
-      {/* Background Soft Blobs */}
-      <div className={styles.bgBlob1}></div>
-      <div className={styles.bgBlob2}></div>
+      <div className="container">
 
-      <div className="container" style={{ position: 'relative', zIndex: 10 }}>
-        
-        <motion.div 
-          className={styles.header}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className={styles.tagWrap}>
-            <span className={styles.tagText}>CÓMO FUNCIONA</span>
-          </div>
+        <div className={styles.header}>
           <h2 className={styles.mainTitle}>
-            Obtener financiación con <br/><span className={styles.highlight}>TeBanco</span> es muy sencillo
+            Haz factoring con Fluxa Finance en 3 simples pasos
           </h2>
           <p className={styles.subtitle}>
-            Sigue estos 5 pasos y adelanta el cobro de tus facturas hoy mismo.
+            Regístrate y en menos de 5 minutos tendrás tu cuenta Fluxa.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          className={styles.cardsGrid}
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
-          {steps.map((step, index) => (
-            <motion.div key={index} className={styles.stepCard} variants={cardVariants} whileHover={{ y: -5, transition: { duration: 0.2 } }}>
-              <div className={`${styles.cardIcon} ${step.colorClass}`}>
-                <div className={styles.stepNumber}>{index + 1}</div>
-                {step.icon}
-              </div>
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>{step.title}</h3>
-                <p className={styles.cardDesc}>{step.desc}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+        <div className={styles.contentWrapper}>
+          <motion.div
+            className={styles.stepsContainer}
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
+            {steps.map((step, index) => (
+              <motion.div key={index} className={styles.stepItem} variants={itemVariants}>
+                <div className={styles.iconWrapper}>
+                  {step.icon}
+                </div>
+                <div className={styles.stepContent}>
+                  <h3 className={styles.stepTitle}>{step.title}</h3>
+                  <p className={styles.stepDesc}>{step.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            className={styles.imageWrapper}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <img
+              src="https://images.pexels.com/photos/6694896/pexels-photo-6694896.jpeg"
+              alt="Cliente sonriendo FLUXA FINANCE"
+              className={styles.image}
+            />
+          </motion.div>
+        </div>
 
       </div>
     </section>

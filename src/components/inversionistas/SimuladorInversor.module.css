@@ -21,7 +21,7 @@
 .title {
   font-size: 3.5rem;
   font-weight: 800;
-  color: #111827;
+  color: #11152a;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
@@ -30,10 +30,10 @@
 .subtitle {
   font-size: 1.25rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: #64748b;
 }
 
-/* Grilla principal: Izquierda form, Derecha resultados */
+/* Grilla principal */
 .mainGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -47,7 +47,7 @@
   }
 }
 
-/* ---------------- FORMULARIO (IZQUIERDA) ---------------- */
+/* ── FORMULARIO ── */
 .formPanel {
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@
 .formTitle {
   font-size: 2rem;
   font-weight: 800;
-  color: #111827;
+  color: #11152a;
   margin-bottom: 0.5rem;
 }
 
@@ -71,7 +71,7 @@
 .label {
   font-size: 1rem;
   font-weight: 700;
-  color: #111827;
+  color: #11152a;
 }
 
 .inputWrapper {
@@ -85,7 +85,7 @@
   left: 1.25rem;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #4b5563;
+  color: #64748b;
   pointer-events: none;
 }
 
@@ -93,32 +93,32 @@
   width: 100%;
   height: 3.5rem;
   background-color: #f8fafc;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 1rem;
   padding: 0 1.25rem 0 2.5rem;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #111827;
+  color: #11152a;
   outline: none;
   transition: all 0.2s ease;
 }
 
 .input:focus {
-  border-color: #2563eb;
+  border-color: #583e9b;
   background-color: #ffffff;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 4px rgba(88, 62, 155, 0.1);
 }
 
 .inputSelect {
   width: 100%;
   height: 3.5rem;
   background-color: #f8fafc;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 1rem;
   padding: 0 3rem 0 1.25rem;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #111827;
+  color: #11152a;
   outline: none;
   appearance: none;
   cursor: pointer;
@@ -126,15 +126,15 @@
 }
 
 .inputSelect:focus {
-  border-color: #2563eb;
+  border-color: #583e9b;
   background-color: #ffffff;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 4px rgba(88, 62, 155, 0.1);
 }
 
 .selectIcon {
   position: absolute;
   right: 1.25rem;
-  color: #4b5563;
+  color: #64748b;
   pointer-events: none;
 }
 
@@ -142,7 +142,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  background: #583e9b;
   color: white;
   font-size: 1.125rem;
   font-weight: 700;
@@ -152,13 +152,13 @@
   cursor: pointer;
   width: fit-content;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 8px 20px rgba(88, 62, 155, 0.25);
 }
 
 .btnCalcular:hover {
-  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  background: #4a3280;
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 12px 25px rgba(88, 62, 155, 0.35);
 }
 
 .disclaimer {
@@ -172,24 +172,24 @@
 }
 
 .infoIcon {
-  color: #3b82f6;
+  color: #583e9b;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
-/* ---------------- RESULTADOS (DERECHA) ---------------- */
+/* ── RESULTADOS ── */
 .resultsPanel {
-  background: #f8fafc;
+  background: #fcfcfd;
   border-radius: 1.5rem;
   padding: 5rem 2.5rem 2rem 2.5rem;
   border: 1px solid rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 20px 40px rgba(17, 21, 42, 0.04);
 }
 
-/* Barras visuales animadas */
+/* Barras visuales */
 .barsContainer {
   display: flex;
   align-items: flex-end;
@@ -211,7 +211,7 @@
 .barTrackWrapper {
   width: 100%;
   max-width: 120px;
-  height: 180px; /* Max height of bars */
+  height: 180px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -235,7 +235,7 @@
 .barVal {
   font-size: 1.125rem;
   font-weight: 800;
-  color: #111827;
+  color: #11152a;
 }
 
 .barRate {
@@ -254,18 +254,19 @@
 }
 
 .barActive .barTrack {
-  background: linear-gradient(180deg, #2563eb 0%, #60a5fa 100%);
-  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.15);
+  /* Fluxa purple gradient instead of blue */
+  background: linear-gradient(180deg, #583e9b 0%, #a78bfa 100%);
+  box-shadow: 0 10px 20px rgba(88, 62, 155, 0.2);
 }
 
 .barLabel {
   margin-top: 1rem;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #4b5563;
+  color: #64748b;
 }
 
-/* Tabla de resumen inferior */
+/* Summary table */
 .summaryTable {
   display: flex;
   flex-direction: column;
@@ -282,7 +283,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: #4b5563;
+  color: #64748b;
   font-size: 0.95rem;
 }
 
@@ -293,14 +294,14 @@
 .summaryRowRight {
   font-weight: 700;
   font-size: 1rem;
-  color: #111827;
+  color: #11152a;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 .greenText {
-  color: #10b981;
+  color: #059669;
 }
 
 .redText {
@@ -316,12 +317,13 @@
 .summaryTotal .summaryRowLeft {
   font-weight: 700;
   font-size: 1.125rem;
-  color: #111827;
+  color: #11152a;
 }
 
 .summaryTotal .summaryRowRight {
   font-size: 1.5rem;
   font-weight: 800;
+  color: #583e9b; /* Fluxa purple for the final total */
 }
 
 @media (max-width: 768px) {
