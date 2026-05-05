@@ -47,7 +47,7 @@ export const HowItWorks = () => {
 
         <div className={styles.header}>
           <h2 className={styles.mainTitle}>
-            Haz factoring con Fluxa Finance en 3 simples pasos
+            Haz factoring con Fluxa en 3 simples pasos
           </h2>
           <p className={styles.subtitle}>
             Regístrate y en menos de 5 minutos tendrás tu cuenta Fluxa.
@@ -84,7 +84,7 @@ export const HowItWorks = () => {
           >
             <img
               src="https://images.pexels.com/photos/6694896/pexels-photo-6694896.jpeg"
-              alt="Cliente sonriendo FLUXA FINANCE"
+              alt="Cliente sonriendo FLUXA"
               className={styles.image}
             />
           </motion.div>

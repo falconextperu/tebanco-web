@@ -15,7 +15,7 @@ export const TrustSection = () => {
             Confianza que fluye con tu negocio
           </h2>
           <p className={styles.description}>
-            En Fluxa Finance, te ofrecemos liquidez rápida y segura mediante el adelanto de tus facturas pendientes con nuestro servicio de factoring.
+            En Fluxa, te ofrecemos liquidez rápida y segura mediante el adelanto de tus facturas pendientes con nuestro servicio de factoring.
           </p>
         </div>
 

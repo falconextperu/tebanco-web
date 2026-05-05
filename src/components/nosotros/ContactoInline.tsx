@@ -43,17 +43,17 @@ export const ContactoInline = () => {
             <span className={styles.tag}>¿Listo para empezar?</span>
             <h2 className={styles.title}>
               Habla con un asesor<br />
-              <span className={styles.hl}>Fluxa Finance</span>
+              <span className={styles.hl}>Fluxa</span>
             </h2>
             <p className={styles.desc}>
               Déjanos tus datos y uno de nuestros especialistas te contactará en menos de 24 horas para analizar tu caso sin costo ni compromiso.
             </p>
             <div className={styles.quickLinks}>
-              <a href="tel:+5117102300" className={styles.quickBtn}>
+              <a href="tel:+51947542277" className={styles.quickBtn}>
                 <Phone size={16} strokeWidth={1.5} />
-                (01) 710 - 2300
+                +51 947 542 277
               </a>
-              <a href="https://wa.me/51942748440" target="_blank" rel="noopener noreferrer" className={styles.quickBtnWa}>
+              <a href="https://wa.me/51947542277" target="_blank" rel="noopener noreferrer" className={styles.quickBtnWa}>
                 <MessageCircle size={16} strokeWidth={1.5} />
                 WhatsApp
               </a>
@@ -141,7 +141,7 @@ export const ContactoInline = () => {
                     className={styles.checkbox}
                   />
                   <span className={styles.checkText}>
-                    Acepto el tratamiento de mis datos personales según la Política de Privacidad de Fluxa Finance.
+                    Acepto el tratamiento de mis datos personales según la Política de Privacidad de Fluxa.
                   </span>
                 </label>
 

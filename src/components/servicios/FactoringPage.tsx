@@ -72,7 +72,7 @@ const steps = [
 const faqs = [
   {
     q: "¿Qué es el factoring y cómo funciona?",
-    a: "El factoring es un servicio financiero que permite a las empresas obtener liquidez inmediata mediante la venta de sus facturas por cobrar a una entidad financiera. Fluxa Finance anticipa el monto de tus facturas y gestiona el cobro en tu lugar."
+    a: "El factoring es un servicio financiero que permite a las empresas obtener liquidez inmediata mediante la venta de sus facturas por cobrar a una entidad financiera. Fluxa anticipa el monto de tus facturas y gestiona el cobro en tu lugar."
   },
   {
     q: "¿Qué beneficios tiene el factoring para mi empresa?",
@@ -87,7 +87,7 @@ const faqs = [
     a: "Una vez aprobada la operación, el desembolso puede realizarse en un plazo de 24 a 48 horas hábiles. En muchos casos incluso el mismo día."
   },
   {
-    q: "¿Cómo solicito el factoring con Fluxa Finance?",
+    q: "¿Cómo solicito el factoring con Fluxa?",
     a: "Solo debes crear una cuenta, cargar tus facturas y un asesor se pondrá en contacto para evaluar tu operación y ofrecerte una solución rápida y personalizada."
   }
 ];
@@ -186,7 +186,7 @@ export const FactoringPage = () => {
                 El factoring es un servicio financiero que te permite convertir tus facturas por cobrar en efectivo inmediato, sin necesidad de esperar los plazos de pago de tus clientes.
               </p>
               <p className={styles.sectionDesc}>
-                En Fluxa Finance, adquirimos tus facturas electrónicas y te adelantamos entre el 85% y 90% de su valor el mismo día. Nosotros nos encargamos del cobro; tú te enfocas en crecer.
+                En Fluxa, adquirimos tus facturas electrónicas y te adelantamos entre el 85% y 90% de su valor el mismo día. Nosotros nos encargamos del cobro; tú te enfocas en crecer.
               </p>
               <ul className={styles.checkList}>
                 {["Proceso 100% digital", "Sin garantías hipotecarias", "Aprobación en el día", "Atención ejecutiva personalizada"].map((item) => (
@@ -210,7 +210,7 @@ export const FactoringPage = () => {
                   <span className={styles.vcDot} style={{ background: '#ff5f57' }} />
                   <span className={styles.vcDot} style={{ background: '#febc2e' }} />
                   <span className={styles.vcDot} style={{ background: '#28c840' }} />
-                  <span className={styles.vcTitle}>Fluxa Finance — Portal</span>
+                  <span className={styles.vcTitle}>Fluxa — Portal</span>
                 </div>
                 <div className={styles.vcBody}>
                   <div className={styles.vcRow}>
@@ -254,7 +254,7 @@ export const FactoringPage = () => {
             transition={{ duration: 0.5 }}
           >
             <div className={styles.sectionTag}>Beneficios</div>
-            <h2 className={styles.sectionTitle}>Por qué elegir Fluxa Finance</h2>
+            <h2 className={styles.sectionTitle}>Por qué elegir Fluxa</h2>
             <p className={styles.sectionDesc}>
               Diseñamos nuestro servicio de factoring pensando en las necesidades reales de las empresas peruanas.
             </p>
@@ -341,7 +341,7 @@ export const FactoringPage = () => {
               <div className={styles.typeBadge}>Más popular</div>
               <h3 className={styles.typeTitle}>Factoring sin Recurso</h3>
               <p className={styles.typeDesc}>
-                Fluxa Finance asume el riesgo de impago del deudor. Si tu cliente no paga, tú no pierdes. La opción más segura para tu empresa.
+                Fluxa asume el riesgo de impago del deudor. Si tu cliente no paga, tú no pierdes. La opción más segura para tu empresa.
               </p>
               <ul className={styles.typeFeatures}>
                 <li><CheckCircle2 size={16} /> Sin riesgo de impago para ti</li>

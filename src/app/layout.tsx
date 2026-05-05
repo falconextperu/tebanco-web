@@ -8,17 +8,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Fluxa Finance — Factoring Inmediato para tu Empresa',
-  description: 'Convierte tus facturas en liquidez inmediata con Fluxa Finance. Factoring 100% digital, seguro y transparente. Supervisado por la SBS.',
+  title: 'Fluxa — Factoring Inmediato para tu Empresa',
+  description: 'Convierte tus facturas en liquidez inmediata con Fluxa. Factoring 100% digital, seguro y transparente. Supervisado por la SBS.',
   icons: {
     icon: '/logos/fluxalogo.svg',
     shortcut: '/logos/fluxalogo.svg',
     apple: '/logos/fluxalogo.svg',
   },
   openGraph: {
-    title: 'Fluxa Finance — Factoring Inmediato',
+    title: 'Fluxa — Factoring Inmediato',
     description: 'Convierte tus facturas en liquidez inmediata. Plataforma fintech peruana regulada por la SBS.',
-    siteName: 'Fluxa Finance',
+    siteName: 'Fluxa',
     locale: 'es_PE',
     type: 'website',
   },

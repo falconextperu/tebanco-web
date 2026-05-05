@@ -10,8 +10,8 @@ export const Footer = () => {
         
         <div className={styles.brandCol}>
           <Link href="/" className={styles.logo}>
-            <img src="/logos/fluxalogo.svg" alt="Fluxa Finance Logo" className={styles.fluxaImage} />
-            <span>FLUXA FINANCE</span>
+            <img src="/logos/fluxalogo.svg" alt="Fluxa Logo" className={styles.fluxaImage} />
+            <span>FLUXA</span>
           </Link>
           <p className={styles.description}>
             Transformando el futuro financiero de las empresas con soluciones de factoring ágiles y transparentes.
@@ -52,7 +52,7 @@ export const Footer = () => {
       <div className={styles.bottom}>
         <div className="container flex-between">
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} Fluxa Finance. Todos los derechos reservados.
+            © {new Date().getFullYear()} Fluxa. Todos los derechos reservados.
           </p>
           <div className={styles.disclaimer}>Autorizados por la SBS.</div>
         </div>

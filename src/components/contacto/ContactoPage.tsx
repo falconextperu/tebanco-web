@@ -14,36 +14,36 @@ const channels = [
   {
     icon: <Phone size={26} strokeWidth={1.5} />,
     label: "Llámanos",
-    value: "(01) 710 - 2300",
+    value: "+51 947 542 277",
     sub: "Lun – Vie · 9 AM a 6 PM",
-    href: "tel:+5117102300",
+    href: "tel:+51947542277",
     color: "#583e9b",
     bg: "rgba(88,62,155,0.08)"
   },
   {
     icon: <Mail size={26} strokeWidth={1.5} />,
     label: "Escríbenos",
-    value: "contacto@fluxafinance.pe",
+    value: "mpariona@fluxa.pe",
     sub: "Respondemos en menos de 24h",
-    href: "mailto:contacto@fluxafinance.pe",
+    href: "mailto:mpariona@fluxa.pe",
     color: "#0891b2",
     bg: "rgba(8,145,178,0.08)"
   },
   {
     icon: <MessageCircle size={26} strokeWidth={1.5} />,
     label: "WhatsApp",
-    value: "+51 942 748 440",
+    value: "+51 947 542 277",
     sub: "Chat directo con un asesor",
-    href: "https://wa.me/51942748440",
+    href: "https://wa.me/51947542277",
     color: "#059669",
     bg: "rgba(5,150,105,0.08)"
   },
   {
     icon: <MapPin size={26} strokeWidth={1.5} />,
     label: "Visítanos",
-    value: "Av. Circunvalación Golf Los Incas 134",
-    sub: "Piso 16, Torre 2 · Santiago de Surco",
-    href: "https://maps.app.goo.gl/bciaqoUU25sUv1dXA",
+    value: "Av. Juan de Arona 755",
+    sub: "Piso 2 · San Isidro",
+    href: "https://maps.app.goo.gl/pM7m4fC8m5P4kX8p7",
     color: "#d97706",
     bg: "rgba(217,119,6,0.08)"
   }
@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     q: "¿Tienen oficina física?",
-    a: "Sí, estamos ubicados en Av. Circunvalación del Club Golf Los Incas 134, Edificio Patio Panorama, Piso 16 Torre 2, Surco — Lima. Atendemos previa cita."
+    a: "Sí, estamos ubicados en Av. Juan de Arona 755. Piso 2, San Isidro — Lima. Atendemos previa cita."
   }
 ];
 
@@ -178,7 +178,7 @@ export const ContactoPage = () => {
                 Asesoría financiera que transforma tu negocio
               </h2>
               <p className={styles.infoDesc}>
-                En Fluxa Finance no solo resolvemos consultas — analizamos tu situación financiera y te ofrecemos una solución diseñada específicamente para ti.
+                En Fluxa no solo resolvemos consultas — analizamos tu situación financiera y te ofrecemos una solución diseñada específicamente para ti.
               </p>
               <ul className={styles.infoList}>
                 {[
@@ -327,7 +327,7 @@ export const ContactoPage = () => {
                       <span>
                         He leído y autorizo el tratamiento de mis datos personales según la{" "}
                         <Link href="#" className={styles.termLink}>Política de Privacidad</Link>{" "}
-                        de Fluxa Finance.
+                        de Fluxa.
                       </span>
                     </label>
 
@@ -356,17 +356,17 @@ export const ContactoPage = () => {
           >
             <div className={styles.mapaInfo}>
               <div className={styles.sectionTag}>Ubicación</div>
-              <h2 className={styles.mapaTitle}>Nuestra oficina en Lima</h2>
+              <h2 className={styles.mapaTitle}>Nuestra oficina en San Isidro</h2>
               <div className={styles.mapaDir}>
                 <MapPin size={20} strokeWidth={1.5} className={styles.mapaDirIcon} />
                 <div>
-                  <strong>Edificio Patio Panorama</strong><br />
-                  Av. Circunvalación del Club Golf Los Incas 134<br />
-                  Piso 16, Torre 2 — Santiago de Surco, Lima
+                  <strong>Centro Empresarial</strong><br />
+                  Av. Juan de Arona 755<br />
+                  Piso 2 — San Isidro, Lima
                 </div>
               </div>
               <a
-                href="https://maps.app.goo.gl/bciaqoUU25sUv1dXA"
+                href="https://maps.app.goo.gl/pM7m4fC8m5P4kX8p7"
                 target="_blank" rel="noopener noreferrer"
                 className={styles.mapaBtn}
               >
@@ -379,7 +379,7 @@ export const ContactoPage = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1!2d-76.9786!3d-12.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA2JzAwLjAiUyA3NsKwNTgnNDMuMCJX!5e0!3m2!1ses!2spe!4v1617000000000!5m2!1ses!2spe"
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen
                 loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-                title="Oficina Fluxa Finance"
+                title="Oficina Fluxa"
               />
             </div>
           </motion.div>
@@ -447,11 +447,11 @@ export const ContactoPage = () => {
               Llámanos ahora y un asesor experto resolverá todas tus dudas en tiempo real.
             </p>
             <div className={styles.ctaActions}>
-              <a href="tel:+5117102300" className={styles.ctaBtnPrimary}>
+              <a href="tel:+51947542277" className={styles.ctaBtnPrimary}>
                 <Phone size={18} strokeWidth={2} />
-                (01) 710 - 2300
+                +51 947 542 277
               </a>
-              <a href="https://wa.me/51942748440" target="_blank" rel="noopener noreferrer" className={styles.ctaBtnWhatsapp}>
+              <a href="https://wa.me/51947542277" target="_blank" rel="noopener noreferrer" className={styles.ctaBtnWhatsapp}>
                 <MessageCircle size={18} strokeWidth={2} />
                 WhatsApp directo
               </a>

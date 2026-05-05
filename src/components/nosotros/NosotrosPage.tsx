@@ -22,7 +22,7 @@ const valores = [
   {
     icon: <Lightbulb size={26} strokeWidth={1.5} />,
     title: "Innovación constante",
-    desc: "Cada proceso en Fluxa Finance está diseñado para ser más inteligente, rápido y eficiente que ayer. La tecnología es nuestro motor."
+    desc: "Cada proceso en Fluxa está diseñado para ser más inteligente, rápido y eficiente que ayer. La tecnología es nuestro motor."
   },
   {
     icon: <Shield size={26} strokeWidth={1.5} />,
@@ -53,10 +53,10 @@ const valores = [
 
 const equipo = [
   {
-    nombre: "Carlos Mendoza",
-    cargo: "CEO & Co-Fundador",
-    bio: "Ex-Banca de Inversión. 15 años estructurando financiamiento corporativo en Lima y Nueva York.",
-    inicial: "CM",
+    nombre: "Miguel Pariona",
+    cargo: "Founder & CEO",
+    bio: "Visionario del sector fintech con amplia experiencia en la transformación digital de servicios financieros en el Perú.",
+    inicial: "MP",
     color: "#583e9b"
   },
   {
@@ -86,13 +86,13 @@ const prensa = [
   {
     medio: "Forbes Perú",
     titulo: "Las 100 mejores startups del Perú en 2025",
-    desc: "Fluxa Finance figura entre las startups financieras más disruptivas e innovadoras del ecosistema peruano.",
+    desc: "Fluxa figura entre las startups financieras más disruptivas e innovadoras del ecosistema peruano.",
     icon: <Award size={20} />,
   },
   {
     medio: "Semana Económica",
     titulo: "Fintech y el fomento de la competencia",
-    desc: "El modelo de Fluxa Finance citado como referencia en la democratización del crédito para PYMEs.",
+    desc: "El modelo de Fluxa citado como referencia en la democratización del crédito para PYMEs.",
     icon: <Newspaper size={20} />,
   },
   {
@@ -162,7 +162,7 @@ export const NosotrosPage = () => {
             </p>
             <div className={styles.heroActions}>
               <a href="http://localhost:5174/registro" className={styles.btnPrimary}>
-                Únete a Fluxa Finance
+                Únete a Fluxa
                 <ArrowRight size={16} strokeWidth={2.5} />
               </a>
               <Link href="/servicios/factoring" className={styles.btnGhost}>
@@ -210,7 +210,7 @@ export const NosotrosPage = () => {
                 Nacimos para democratizar el acceso al capital
               </h2>
               <p className={styles.sectionPara}>
-                Fluxa Finance nació de una premisa simple: en el Perú, miles de empresas con facturas reales y clientes sólidos no pueden acceder a liquidez porque el sistema financiero tradicional es lento, burocrático y excluyente.
+                Fluxa nació de una premisa simple: en el Perú, miles de empresas con facturas reales y clientes sólidos no pueden acceder a liquidez porque el sistema financiero tradicional es lento, burocrático y excluyente.
               </p>
               <p className={styles.sectionPara}>
                 Somos una plataforma tecnológica que resuelve ese problema en horas, no semanas. Conectamos empresas con capital de trabajo inmediato y ofrecemos a los inversionistas una alternativa de alta rentabilidad respaldada por activos reales.
@@ -257,8 +257,8 @@ export const NosotrosPage = () => {
               </div>
               <div className={styles.visualCenter}>
                 <div className={styles.vcCircle}>
-                  <img src="/logos/fluxalogo.svg" alt="Fluxa Finance" className={styles.vcLogo} />
-                  <span className={styles.vcBrand}>FLUXA FINANCE</span>
+                  <img src="/logos/fluxalogo.svg" alt="Fluxa" className={styles.vcLogo} />
+                  <span className={styles.vcBrand}>FLUXA</span>
                 </div>
               </div>
             </motion.div>
@@ -318,7 +318,7 @@ export const NosotrosPage = () => {
             <div className={styles.sectionTag}>Lo que nos define</div>
             <h2 className={styles.sectionTitle}>Nuestros valores</h2>
             <p className={styles.sectionDescCenter}>
-              Cada decisión que tomamos en Fluxa Finance parte de estos principios fundamentales.
+              Cada decisión que tomamos en Fluxa parte de estos principios fundamentales.
             </p>
           </motion.div>
 
@@ -411,7 +411,7 @@ export const NosotrosPage = () => {
             transition={{ duration: 0.5 }}
           >
             <div className={styles.sectionTag}>Medios de comunicación</div>
-            <h2 className={styles.sectionTitle}>Fluxa Finance en prensa</h2>
+            <h2 className={styles.sectionTitle}>Fluxa en prensa</h2>
           </motion.div>
 
           <motion.div
@@ -454,7 +454,7 @@ export const NosotrosPage = () => {
             <div className={styles.ctaGlowB} />
             <div className={styles.ctaContent}>
               <h2 className={styles.ctaTitle}>
-                ¿Listo para empezar con<br />Fluxa Finance?
+                ¿Listo para empezar con<br />Fluxa?
               </h2>
               <p className={styles.ctaDesc}>
                 Más de 2,000 empresas ya confían en nosotros. Únete hoy y descubre por qué somos la plataforma fintech de factoring más confiable del Perú.

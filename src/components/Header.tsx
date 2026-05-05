@@ -48,7 +48,7 @@ export const Header = () => {
         <div className={`container ${styles.container}`}>
           <Link href="/" className={styles.logo} onClick={closeMenu}>
             <div className={styles.logoIcon}>
-              <img src="/logos/fluxalogo.svg" alt="Fluxa Finance Logo" className={styles.fluxaImage} />
+              <img src="/logos/fluxalogo.svg" alt="Fluxa Logo" className={styles.fluxaImage} />
             </div>
             FLUXA FINANCE
           </Link>
