@@ -41,9 +41,9 @@ const channels = [
   {
     icon: <MapPin size={26} strokeWidth={1.5} />,
     label: "Visítanos",
-    value: "Av. Juan de Arona 755",
-    sub: "Piso 2 · San Isidro",
-    href: "https://maps.app.goo.gl/pM7m4fC8m5P4kX8p7",
+    value: "Av. Paseo de la República 3617",
+    sub: "Piso 10 · San Isidro",
+    href: "https://www.google.com/maps?q=-12.096123447528354,-77.02798394678064",
     color: "#d97706",
     bg: "rgba(217,119,6,0.08)"
   }
@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     q: "¿Tienen oficina física?",
-    a: "Sí, estamos ubicados en Av. Juan de Arona 755. Piso 2, San Isidro — Lima. Atendemos previa cita."
+    a: "Sí, estamos ubicados en Av. Paseo de la República 3617. Piso 10, San Isidro — Lima. Atendemos previa cita."
   }
 ];
 
@@ -360,13 +360,13 @@ export const ContactoPage = () => {
               <div className={styles.mapaDir}>
                 <MapPin size={20} strokeWidth={1.5} className={styles.mapaDirIcon} />
                 <div>
-                  <strong>Centro Empresarial</strong><br />
-                  Av. Juan de Arona 755<br />
-                  Piso 2 — San Isidro, Lima
+                  <strong>Edificio Capital</strong><br />
+                  Av. Paseo de la República 3617<br />
+                  Piso 10 — San Isidro, Lima
                 </div>
               </div>
               <a
-                href="https://maps.app.goo.gl/pM7m4fC8m5P4kX8p7"
+                href="https://www.google.com/maps?q=-12.096123447528354,-77.02798394678064"
                 target="_blank" rel="noopener noreferrer"
                 className={styles.mapaBtn}
               >
@@ -376,7 +376,7 @@ export const ContactoPage = () => {
             </div>
             <div className={styles.mapaEmbed}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1!2d-76.9786!3d-12.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA2JzAwLjAiUyA3NsKwNTgnNDMuMCJX!5e0!3m2!1ses!2spe!4v1617000000000!5m2!1ses!2spe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1!2d-77.0279839!3d-12.0961234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA1JzQ2LjAiUyA3N8KwMDEnNDAuNyJX!5e0!3m2!1ses!2spe!4v1714935000000!5m2!1ses!2spe"
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen
                 loading="lazy" referrerPolicy="no-referrer-when-downgrade"
                 title="Oficina Fluxa"
