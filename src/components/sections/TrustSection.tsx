@@ -6,16 +6,18 @@ import Image from 'next/image';
 
 export const TrustSection = () => {
   return (
-    <section className="relative overflow-hidden bg-[#f4f4f4] py-14 pb-16 lg:py-16 lg:pb-20">
+    <section className="relative overflow-hidden bg-white py-14 pb-16 lg:py-16 lg:pb-20">
       <style>{`
         .trust-grid { grid-template-columns: 1fr; }
         @media (min-width: 1024px) { .trust-grid { grid-template-columns: 1.15fr 0.85fr; } }
       `}</style>
 
+      {/* Vector sutil solo en esquina izquierda */}
       <img
         src="/svg/vectorfluxa.svg"
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 w-full h-full object-cover select-none z-[0]"
+        className="pointer-events-none absolute top-0 left-0 h-full w-auto select-none z-[0]"
+        style={{ maxWidth: '55%' }}
       />
 
       <div
