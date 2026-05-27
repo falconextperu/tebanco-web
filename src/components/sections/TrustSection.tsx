@@ -15,7 +15,7 @@ export const TrustSection = () => {
       <img
         src="/svg/vectorfluxa.svg"
         aria-hidden="true"
-        className="pointer-events-none absolute top-[-30%] left-[0%] inset-0 w-full h-full object-cover select-none z-[0]"
+        className="pointer-events-none absolute inset-0 w-full h-full object-cover select-none z-[0]"
       />
 
       <div
