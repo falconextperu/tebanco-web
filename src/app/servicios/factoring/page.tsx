@@ -1,6 +1,6 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { FactoringPage } from "@/components/servicios/FactoringPage";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { FactoringPage } from "@/components/pages/servicios/FactoringPage";
 
 export const metadata = {
   title: "Factoring en Perú | Liquidez Inmediata para tu Empresa — Fluxa",

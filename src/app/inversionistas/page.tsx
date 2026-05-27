@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { HeroInversor } from "@/components/inversionistas/HeroInversor";
-import { BeneficiosInversor } from "@/components/inversionistas/BeneficiosInversor";
-import { SimuladorInversor } from "@/components/inversionistas/SimuladorInversor";
-import { TestimoniosInversor } from "@/components/inversionistas/TestimoniosInversor";
-import { FaqInversor } from "@/components/inversionistas/FaqInversor";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { HeroInversor } from "@/components/pages/inversionistas/HeroInversor";
+import { BeneficiosInversor } from "@/components/pages/inversionistas/BeneficiosInversor";
+import { SimuladorInversor } from "@/components/pages/inversionistas/SimuladorInversor";
+import { FaqInversor } from "@/components/pages/inversionistas/FaqInversor";
+import { InvierteInfoSection } from "@/components/sections/InvierteInfoSection";
 
 export const metadata: Metadata = {
   title: 'Inversiones en Factoring | Fluxa',
@@ -19,8 +19,7 @@ export default function InversionistasPage() {
       <main>
         <HeroInversor />
         <SimuladorInversor />
-        <BeneficiosInversor />
-        {/* <TestimoniosInversor /> — COMENTADO TEMPORALMENTE */}
+        <InvierteInfoSection />
         <FaqInversor />
       </main>
       <Footer />

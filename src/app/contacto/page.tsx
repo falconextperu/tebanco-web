@@ -1,6 +1,6 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { ContactoPage } from "@/components/contacto/ContactoPage";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { ContactoPage } from "@/components/pages/contacto/ContactoPage";
 
 export const metadata = {
   title: "Contáctanos | Fluxa — Asesoría Financiera Especializada",

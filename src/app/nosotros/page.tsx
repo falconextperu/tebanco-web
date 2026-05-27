@@ -1,6 +1,6 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { NosotrosPage } from "@/components/nosotros/NosotrosPage";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { NosotrosPage } from "@/components/pages/nosotros/NosotrosPage";
 
 export const metadata = {
   title: "Quiénes Somos | Fluxa — Fintech de Factoring en Perú",
