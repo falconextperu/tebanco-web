@@ -16,15 +16,10 @@ export const TrustSection = () => {
       <img
         src="/svg/vectorfluxa.svg"
         aria-hidden="true"
-        className="pointer-events-none absolute top-0 left-0 h-full w-auto select-none z-[0]"
-        style={{ maxWidth: '55%' }}
+        className="pointer-events-none absolute top-[-160px] left-0 h-full w-auto select-none z-[0]"
+        style={{ maxWidth: '100%' }}
       />
 
-      <div
-        aria-hidden="true"
-        className="absolute inset-y-0 right-0 w-[72%] pointer-events-none hidden lg:block z-[1]"
-        style={{ background: '#ece8ef', clipPath: 'polygon(24% 0, 100% 0, 100% 100%, 0 100%)' }}
-      />
 
       <div className="relative z-[2] max-w-screen-lg mx-auto px-5 py-8 lg:py-10">
 
@@ -67,14 +62,14 @@ export const TrustSection = () => {
               />
             </div>
 
-            <h2 className="text-[#2c2b68] text-[32px] leading-[1.1] font-medium lg:text-[58px] lg:leading-[1.05]">
+            <h2 className="text-[#2c2b68] text-[32px] leading-[1.1] font-medium lg:text-[38px] lg:leading-[1.05]">
               El problema<br />
               no es vender.<br />
               <span className="font-bold">Es esperar</span><br />
               <span className="font-bold">para cobrar.</span>
             </h2>
 
-            <p className="mt-6 text-[17px] leading-[1.55] text-[#313131] lg:mt-8 lg:text-[22px] lg:leading-[1.45]">
+            <p className="mt-6 text-[17px] leading-[1.55] text-[#313131] lg:mt-8 lg:text-[20px] lg:leading-[1.45]">
               Miles de empresas tienen facturas aprobadas y clientes sólidos, pero siguen enfrentando
               problemas de liquidez por los tiempos de pago y la burocracia financiera tradicional.
             </p>
@@ -89,7 +84,7 @@ export const TrustSection = () => {
           transition={{ duration: 0.55 }}
           className="mt-8 max-w-[1080px] mx-auto lg:mt-10"
         >
-          <p className="text-[17px] leading-[1.6] text-[#2f2f2f] lg:text-[22px] lg:leading-[1.5]">
+          <p className="text-[17px] leading-[1.6] text-[#2f2f2f] lg:text-[20px] lg:leading-[1.5]">
             Reducimos tiempos, eliminamos procesos innecesarios y hacemos que acceder a capital sea más
             simple, accesible y eficiente para negocios de distintos sectores como transporte, logística,
             manufactura y servicios.
