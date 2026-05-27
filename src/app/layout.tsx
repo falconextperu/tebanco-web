@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   title: 'Fluxa — Factoring Inmediato para tu Empresa',
   description: 'Convierte tus facturas en liquidez inmediata con Fluxa. Factoring 100% digital, seguro y transparente. Supervisado por la SBS.',
   icons: {
-    icon: '/logos/fluxalogo.svg',
-    shortcut: '/logos/fluxalogo.svg',
-    apple: '/logos/fluxalogo.svg',
+    icon: '/svg/fluxalogo.svg',
+    shortcut: '/svg/fluxalogo.svg',
+    apple: '/svg/fluxalogo.svg',
   },
   openGraph: {
     title: 'Fluxa — Factoring Inmediato',
